@@ -7,5 +7,7 @@ This code is inspired from <a href="https://www.youtube.com/watch?v=-bnVGH62Yho&
 - Download or <code>git clone https://github.com/im-hanzou/DisHook.git</code> from this repository.
 - Install modules by running the following command: <code>pip install -r requirements.txt</code>
 - Run the script using the following command: <code>python dishook.py</code>
+### Discord webhook URL retrieval
+Retreiving discord webhook URL: <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks">Discord Webhook<a>
 ## Disclaimer
 Misuse or inappropriate use of this script is the user's responsibility. This script was created for educational purposes only. The author is not responsible for any negative consequences resulting from inappropriate use of this script. Use it wisely.
