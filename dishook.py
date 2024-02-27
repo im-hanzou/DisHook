@@ -22,7 +22,7 @@ def send_request_and_process_code(code, webhook_url):
         print(f"Code {Fore.CYAN}{code}{Fore.RESET} > Status: {Fore.GREEN}VALID{Fore.RESET}")
         send_to_discord_webhook(code, webhook_url)
         save_to_file(code, VALID_CODES_FILE)
-        print(f"{Fore.YELLOW}Delay 10 seconds as needed to avoid rate limiting{Fore.RESET}")
+        print(f"{Fore.YELLOW}Delay {delay} seconds as needed to avoid rate limiting{Fore.RESET}")
     elif response.status_code == 429:  # Rate limit exceeded
         retry_after = response.json().get("retry_after") / 1000  # Convert to seconds
         print(f"{Fore.RED}Rate limited. Waiting for {retry_after} seconds before retrying...{Fore.RESET}")
@@ -31,7 +31,7 @@ def send_request_and_process_code(code, webhook_url):
     else:
         print(f"Code {Fore.CYAN}{code}{Fore.RESET} > Status: {Fore.RED}INVALID{Fore.RESET}")
         save_to_file(code, INVALID_CODES_FILE)
-        print(f"{Fore.YELLOW}Delay 10 seconds as needed to avoid rate limiting{Fore.RESET}")
+        print(f"{Fore.YELLOW}Delay {delay} seconds as needed to avoid rate limiting{Fore.RESET}")
 
 def send_to_discord_webhook(code, webhook_url):
     """Send the code to Discord webhook."""
@@ -62,9 +62,9 @@ if __name__ == "__main__":
     print_banner()
     print(f"{Fore.MAGENTA}ChatGPT's Discord Nitro Generator \n{Fore.RESET}")
     webhook_url = input(f"{Fore.YELLOW}Enter your Discord webhook URL: {Fore.RESET}")
-    delay = float(input(f"{Fore.YELLOW}Enter delay time (to avoid rate limiting): {Fore.RESET}"))
     print(f"Generated {Fore.MAGENTA}Code{Fore.RESET} will be saved to: {Fore.GREEN}valid_codes.txt{Fore.RESET}")
     while True:
         random_code = generate_random_string()
+        delay = float(round(random.uniform(10, 60), 1))
         send_request_and_process_code(random_code, webhook_url)
         time.sleep(delay)  # Adjust the delay as needed to avoid rate limiting
