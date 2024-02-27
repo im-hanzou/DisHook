@@ -65,6 +65,6 @@ if __name__ == "__main__":
     print(f"Generated {Fore.MAGENTA}Code{Fore.RESET} will be saved to: {Fore.GREEN}valid_codes.txt{Fore.RESET}")
     while True:
         random_code = generate_random_string()
-        delay = float(round(random.uniform(10, 60), 1))
+        delay = float(round(random.uniform(10, 20), 1))
         send_request_and_process_code(random_code, webhook_url)
         time.sleep(delay)  # Adjust the delay as needed to avoid rate limiting
