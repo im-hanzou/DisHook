@@ -11,3 +11,5 @@ This code is inspired from <a href="https://www.youtube.com/watch?v=-bnVGH62Yho&
 Retreiving discord webhook URL: <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks">Discord Webhook<a>
 ## Disclaimer
 Misuse or inappropriate use of this script is the user's responsibility. This script was created for educational purposes only. The author is not responsible for any negative consequences resulting from inappropriate use of this script. Use it wisely.
+# Note
+Proxied version will be updated soon! <3
