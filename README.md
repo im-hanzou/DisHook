@@ -1,7 +1,8 @@
 # DisHook
 Python x ChatGPT script. Generates random Discord Nitro codes and test their validity by sending requests to the Discord server. If the generated code is valid, the script will send the code to the specified Discord webhook.
 <br><center><img src="https://github.com/im-hanzou/DisHook/blob/main/dishook.png" width="600"></center><br>
-This code is inspired from <a href="https://www.youtube.com/watch?v=-bnVGH62Yho&ab_channel=NoTextToSpeech">YouTube/NoTextToSpeech</a> and featuring ChatGPT ( im-lazy )
+This code is inspired from <a href="https://www.youtube.com/watch?v=-bnVGH62Yho&ab_channel=NoTextToSpeech">YouTube/NoTextToSpeech</a> and featuring ChatGPT ( im-lazy )<br>
+Thanks to <a href="https://github.com/rikurunico">rikurunico</a> for helping fix the code!
 # Usage
 ### Installation and Running:
 - Download or <code>git clone https://github.com/im-hanzou/DisHook.git</code> from this repository.
@@ -12,4 +13,5 @@ Retreiving discord webhook URL: <a href="https://support.discord.com/hc/en-us/ar
 ## Disclaimer
 Misuse or inappropriate use of this script is the user's responsibility. This script was created for educational purposes only. The author is not responsible for any negative consequences resulting from inappropriate use of this script. Use it wisely.
 # Note
+Update: add mode generator only and checker only!<br>
 Proxied version will be updated soon! <3
