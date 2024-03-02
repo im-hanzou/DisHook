@@ -9,6 +9,7 @@ from colorama import init, Fore
 init()
 
 VALID_CODES_FILE = "valid_codes.txt"
+VALID_CODES_BUT_ALREADY_USED = "valid_used.txt"
 INVALID_CODES_FILE = "invalid_codes.txt"
 
 
@@ -27,6 +28,7 @@ def send_request_and_process_code(code, webhook_url):
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
+        save_to_file(code, VALID_CODES_FILE)
         if data["uses"] == 0:
             print(
                 f"Code {Fore.CYAN}{code}{Fore.RESET} > Status: {Fore.GREEN}VALID{Fore.RESET}"
@@ -37,7 +39,7 @@ def send_request_and_process_code(code, webhook_url):
             print(
                 f"Code {Fore.CYAN}{code}{Fore.RESET} > Status: {Fore.RED}INVALID (Already Used){Fore.RESET}"
             )
-            save_to_file(code, INVALID_CODES_FILE)
+            save_to_file(code, VALID_CODES_BUT_ALREADY_USED)
     elif response.status_code == 429:  # Rate limit exceeded
         retry_after = response.json().get("retry_after") / 1000  # Convert to seconds
         print(
