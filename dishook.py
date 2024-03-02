@@ -5,7 +5,7 @@ import time
 import string
 from colorama import init, Fore
 
-# Initialize colorama
+
 init()
 
 VALID_CODES_FILE = "valid_codes.txt"
@@ -85,9 +85,9 @@ def print_banner():
 
 if __name__ == "__main__":
     print_banner()
-    print(f"{Fore.MAGENTA}ChatGPT's Discord Nitro Checker \n{Fore.RESET}")
-    mode = input(f"{Fore.YELLOW}Choose mode (generate/check): {Fore.RESET}").lower()
-    if mode not in ["generate", "check"]:
+    print(f"{Fore.MAGENTA}ChatGPT's Discord Nitro Tools \n{Fore.RESET}")
+    mode = input(f"{Fore.YELLOW}Choose mode (generate/checker): {Fore.RESET}").lower()
+    if mode not in ["generate", "checker"]:
         print(f"{Fore.RED}Invalid mode selected.{Fore.RESET}")
         exit(1)
 
@@ -125,3 +125,5 @@ if __name__ == "__main__":
                 time.sleep(delay)
             else:
                 print(f"{Fore.RED}No code found in URL: {url}{Fore.RESET}")
+
+# recoded by im-hanzou | rikurunico ( https://github.com/rikurunico )
