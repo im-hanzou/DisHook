@@ -36,10 +36,11 @@ def send_request_and_process_code(code, webhook_url):
 def send_to_discord_webhook(code, webhook_url):
     """Send the code to Discord webhook."""
     data = {
+        "username": "NitroBotz",
         "content": f"https://discord.gift/{code}"
     }
     response = requests.post(webhook_url, json=data)
-    if response.status_code != 200:
+    if response.status_code != 204:
         print(f"{Fore.RED}Failed to send message to Discord webhook: {response.status_code}{Fore.RESET}")
 
 def save_to_file(code, filename):
