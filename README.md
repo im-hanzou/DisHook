@@ -15,3 +15,4 @@ Misuse or inappropriate use of this script is the user's responsibility. This sc
 # Note
 Update: add mode generator only and checker only!<br>
 Proxied version will be updated soon! <3
+# THIS CODE IS FREE! DON'T SELL THIS CODE!
