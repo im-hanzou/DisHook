@@ -11,7 +11,7 @@ Thanks to <a href="https://github.com/rikurunico">rikurunico</a> for helping fix
 ### Discord webhook URL retrieval
 Retreiving discord webhook URL: <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks">Discord Webhook<a>
 ## Disclaimer
-Misuse or inappropriate use of this script is the user's responsibility. This script was created for educational purposes only. The author is not responsible for any negative consequences resulting from inappropriate use of this script. Use it wisely.
+This script was created for educational purposes only. Misuse or inappropriate use of this script is the user's responsibility. The author is not responsible for any negative consequences resulting from inappropriate use of this script. Use it wisely.
 # Note
 Update: add mode generator only and checker only!<br>
 Proxied version will be updated soon! <3
