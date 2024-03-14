@@ -25,4 +25,9 @@ setup(
         'requests',
         'colorama'
     ],
+    entry_points={
+        'console_scripts': [
+            'xdishook=xDisHook.main:main_function',
+        ],
+    },
 )
