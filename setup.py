@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='discord-nitro-tools',
+    name='DisHook',
     version='1.0.0',
     author='Hanzou',
     author_email='hanzou@hanzou.sh',
